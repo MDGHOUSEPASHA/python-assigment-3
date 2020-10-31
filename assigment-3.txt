@@ -1,0 +1,166 @@
+                        ASSIGMENT-3
+1 ANS:
+  SkillSanta_Dict={
+    "name":"sachin",
+    "age":22,
+    "salary":6000,
+    "city":"New Delhi"
+}
+SkillSanta_Dict["city"]="Hyderabad"
+print(SkillSanta_Dict)
+ 
+OUTPUT:
+  
+{'name': 'sachin', 'age': 22, 'salary': 6000, 'city': 'Hyderabad'}
+
+2 ANS:
+def CountFrequency(my_list): 
+         freq = {} 
+    for item in my_list: 
+        if (item in freq): 
+            freq[item] += 1
+        else: 
+            freq[item] = 1
+  
+    for key, value in freq.items(): 
+       print(f"{key}:{value}")
+  
+ my_list =[11,45,8,11,23,45,23,45,89] 
+ CountFrequency(my_list) 
+output:
+{
+    11 :  2
+    45 :  3
+     8 :  1
+    23 :  2
+    89 :  1
+}
+
+3ANS:
+def Remove(duplicate): 
+    final_list = [] 
+    for num in duplicate: 
+        if num not in final_list: 
+            final_list.append(num)
+     return final_list  
+duplicate = [87,45,41,65,94,41,99,94] 
+print(Remove(duplicate))
+print("min:",min(Remove(duplicate)))
+print("max :",max(Remove(duplicate)))
+
+OUTPUT:
+[87, 45, 41, 65, 94, 99]
+min:41
+max:99
+
+4ANS:
+def showEmployee(name, salary=9000):
+    print("Employee", name, "salary is:", salary)
+
+showEmployee("Eddy", 9000)
+showEmployee("Eddy")
+
+OUTPUT:
+Employee Eddy salary is: 9000
+Employee Eddy salary is: 9000
+
+5ANS:
+def outerFun(a, b):
+    square = a**2
+    def innerFun(a,b):
+        return a+b
+    add = innerFun(a, b)
+    return add+5
+
+result = outerFun(5, 10)
+print(result)
+
+OUTPUT:
+20
+
+6ANS:
+nterms = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+if nterms <= 0:
+   print("Please enter a positive integer")
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+OUTPUT:
+How many term? 9
+0
+1
+1
+2
+3
+5
+8
+13
+21
+
+7ans:
+def displayStudent(name, age):
+    print(name, age)
+
+displayStudent("ghouse", 22)
+
+showStudent = displayStudent
+showStudent("ghouse", 22)
+
+OUTPUT:
+ghouse 22
+ghouse 22
+
+8ANS:
+mobile=1234567890
+user_input=(input("enter your mobile number:"))
+if mobile==int(user_input):
+    print ("sucess")
+
+else:
+    print("please give correct number")
+output:
+enter your mobile number:1
+please give correct number
+
+9ANS:
+def string_test(s):
+    d={"UPPER_CASE":0, "LOWER_CASE":0}
+    for c in s:
+        if c.isupper():
+           d["UPPER_CASE"]+=1
+        elif c.islower():
+           d["LOWER_CASE"]+=1
+        else:
+           pass
+    print ("Original String : ", s)
+    print ("No. of Upper case characters : ", d["UPPER_CASE"])
+    print ("No. of Lower case Characters : ", d["LOWER_CASE"])
+
+string_test('The quick Brown Fox')
+   
+OUTPUT:
+Original String :  The quick Brown Fox
+No. of Upper case characters :  3
+No. of Lower case Characters :  13
+
+10ANS:
+def perfect_number(n):
+    sum = 0
+    for x in range(1, n):
+        if n % x == 0:
+            sum += x
+    return sum == n
+print(perfect_number(6))
+ 
+OUTPUT:6
+     
